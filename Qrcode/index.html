@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="qrCode.css">
+    <!-- <script src="js/qrcode.js" defer></script>    defer used to put it in head-->
+    <title>Qrcode generator</title>
+</head>
+<body>
+    <div class="header">
+        <h1>QrCodeGenerator</h1>
+    </div>
+    <div class="Container">
+        <div class="boxOne">
+            <h2>Generate Your Qr code</h2>
+            <div class="pag">
+                <p>Generate Qr-code for your business, personal use and many more.</p>
+
+            </div>
+            <form id="input">
+                 <div id="input_Box">
+                   <input type="url" placeholder="Enter your URl" id="url" required>
+
+                 </div>
+                <select id="selectSize">
+                    <option value="100">100x100</option>
+                    <option value="200">200x200</option>
+                    <option value="300" selected>300x300</option>
+                    <option value="400">400x400</option>
+                    <option value="500">500x500</option>
+                </select>
+                <div id="generateBtn">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+
+
+            <!-- Generated qr code -->
+
+            <div id="Ready_qrcode">
+                <div id="loader">
+                  <div class="loader_"></div>
+
+                </div>
+                <div id="qrcode"></div>
+                <script type="text/javascript">
+                 new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+                </script>
+            </div>
+            <span id="space"></span>
+
+
+
+        </div>
+        <div class="boxTwo">
+            <img src="assets/qrcode2.jpg" class="sideImage" alt="">
+        </div>
+    </div>
+
+
+<!-----------------source: cdnjs.com, qrcode.js-------------------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="qrcode.js"></script>
+</body>
+</html>
